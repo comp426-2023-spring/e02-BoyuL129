@@ -1,83 +1,72 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
 }
 
 h1 {
-    text-align: center;
     color: #333;
-}
-
-.game-container, .results-container, .rules-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.game-choice,
-.opponent-choice,
-.move-choice {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-.play-button,
-.reset-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
-    cursor: pointer;
+    padding: 20px 0;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+input[type=radio], input[type=checkbox] {
+    margin-right: 10px;
+}
+
+
+#playButton {
+    display: flex;
+    justify-content: center;
+}
+
+#gameSelector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#opponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
     padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#resultDiv {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
     border-radius: 5px;
 }
 
-.play-button:disabled,
-.reset-button:disabled {
-    background-color: #a3a3a3;
-    cursor: not-allowed;
-}
-
-
-.reset-button:hover {
-    background-color: #45a049;
-}
-
-.results-container, .game-container, .rules-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.rules-link {
-    display: block;
-    margin-top: 15px;
-    color: #007BFF;
-    text-decoration: none;
-}
-.rules-link:hover {
-    text-decoration: underline;
+.choices {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }

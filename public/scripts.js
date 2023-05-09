@@ -104,12 +104,22 @@ async function playButton() {
     document.querySelector('div:nth-of-type(1)').style.display = 'block';
     document.querySelector('div:nth-of-type(2)').style.display = 'block';
   
-    document.getElementById('playButton').innerHTML = '<button type="button" onclick="playButton()">Play Again</button>';
-    // Hide the appropriate choices element(s) based on the game selector value
-      document.getElementById('rpsChoices').style.display = 'none';
-      document.getElementById('rpslsChoices').style.display = 'none';
+    // Create a new button
+    let newButton = document.createElement('button');
+    newButton.type = "button";
+    newButton.onclick = playButton;
+    newButton.innerText = "Play Again";
+
+    // Clear existing content and append the new button
+    let playButtonDiv = document.getElementById('playButton');
+    playButtonDiv.innerHTML = '';
+    playButtonDiv.appendChild(newButton);
   
-  }
+    // Hide the appropriate choices element(s) based on the game selector value
+    document.getElementById('rpsChoices').style.display = 'none';
+    document.getElementById('rpslsChoices').style.display = 'none';
+}
+
   
   
   function getOpponentChoice(gameSelector) {

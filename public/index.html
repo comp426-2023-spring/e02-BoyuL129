@@ -3,19 +3,19 @@
     <head>
         <title>Shitou Jiandao Bu</title>
         <!-- Link to your script file(s) and CSS in here somewhere -->
-        <link href="./styles.css" rel="stylesheet">
-        <script src="./scripts.js"></script>
+        <link href="styles.css" rel="stylesheet">
+        <script src="scripts.js"></script>
     </head>
     <body>
 
     <!-- Your interface markup goes here -->
     <h1>Shitou Jiandao Bu</h1>
-    <div>
+    <div id="gameSelector">
       <input type="radio" name="gameSelector" value="rpsChosen" checked> Rock-Paper-Scissors
       <input type="radio" name="gameSelector" value="rpslsChosen"> Rock-Paper-Scissors-Lizard-Spock
       <button type="button" onclick="showRules()">Show Rules</button>
     </div>
-    <div>
+    <div id="opponent">
       <input type="checkbox" name="rpsOpponentChoice" id="rpsOpponentChoice"> Play against an opponent
     </div>
     <div id="rpsChoices" class="choices" style="display: none;">
