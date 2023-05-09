@@ -22,7 +22,6 @@ async function playButton() {
       document.getElementById('rpslsChoices').style.display = 'block';
     }
   
-  
     // Show the Play Again button
     document.getElementById('playButton').innerHTML = '<button type="button" onclick="playButton()">Play Again</button> <button type="button" onclick="resetPage()">Reset</button>';
     //document.getElementById('playButton').innerHTML = '<button type="button" onclick="resetPage()">Reset</button>';
