@@ -145,7 +145,7 @@ async function playButton() {
     } else {
       var result = 'You lose!';
     }
-    return "You chose " + playerChoice + " and your opponent chose " + opponentChoice + ". Result: " + result;
+    return "You chose " + playerChoice + " , and your opponent chose " + opponentChoice + ". Result: " + result;
   }
   
   function showRules() {
