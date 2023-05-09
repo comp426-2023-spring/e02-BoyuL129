@@ -1,7 +1,3 @@
-// If you would like to see some examples of similar code to make an interface interact with an API, 
-// check out the coin-server example from a previous COMP 426 semester.
-// https://github.com/jdmar3/coinserver
-
 // If you would like to see some examples of similar code to make an interface interact with an API,
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
@@ -21,6 +17,7 @@ async function playButton() {
     } else if (gameSelector === 'rpslsChosen') {
       document.getElementById('rpslsChoices').style.display = 'block';
     }
+  
   
     // Show the Play Again button
     document.getElementById('playButton').innerHTML = '<button type="button" onclick="playButton()">Play Again</button> <button type="button" onclick="resetPage()">Reset</button>';
@@ -107,22 +104,12 @@ async function playButton() {
     document.querySelector('div:nth-of-type(1)').style.display = 'block';
     document.querySelector('div:nth-of-type(2)').style.display = 'block';
   
-    // Create a new button
-    let newButton = document.createElement('button');
-    newButton.type = "button";
-    newButton.onclick = playButton;
-    newButton.innerText = "Play Again";
-
-    // Clear existing content and append the new button
-    let playButtonDiv = document.getElementById('playButton');
-    playButtonDiv.innerHTML = '';
-    playButtonDiv.appendChild(newButton);
-    
+    document.getElementById('playButton').innerHTML = '<button type="button" onclick="playButton()">Play Again</button>';
     // Hide the appropriate choices element(s) based on the game selector value
-    document.getElementById('rpsChoices').style.display = 'none';
-    document.getElementById('rpslsChoices').style.display = 'none';
-}
-
+      document.getElementById('rpsChoices').style.display = 'none';
+      document.getElementById('rpslsChoices').style.display = 'none';
+  
+  }
   
   
   function getOpponentChoice(gameSelector) {
@@ -155,7 +142,7 @@ async function playButton() {
     } else {
       var result = 'You lose!';
     }
-    return "You chose " + playerChoice + " , and your opponent chose " + opponentChoice + ". Result: " + result;
+    return "You chose " + playerChoice + " and your opponent chose " + opponentChoice + ". Result: " + result;
   }
   
   function showRules() {
